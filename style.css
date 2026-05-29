@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe6e6, #ffb3b3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 450px;
+    width: 90%;
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+h1 {
+    color: #d63031;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #4d4d4d;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+}
+
+.btn:hover {
+    background-color: #ee5253;
+    transform: scale(1.05);
+}
+
+.hidden-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.rose {
+    font-size: 4rem;
+    margin: 15px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.signature {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #777;
+    margin-top: 15px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Floating Hearts Styling */
+.heart {
+    position: absolute;
+    color: rgba(255, 71, 87, 0.6);
+    font-size: 20px;
+    animation: fly 5s linear infinite;
+    bottom: -20px;
+    user-select: none;
+    z-index: 1;
+}
+
+@keyframes fly {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
